@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body onload="init()">
+    <div id="big">
+    <header class="header">
+        <a href="#" class="logo"><i class="fa fa-hotel"></i>hotel Booking</a>
+         <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">about</a>
+            <a href="#">room</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">faq</a>
+            <a  href="reservation" class="btn">book now</a>
+         </nav>
+         <div id="menu-btn" class="fa fa-bars"></div>
+
+    </header>
+
+    <section class="home" id="home" >
+            <div class="swiper home-slider" >
+                <div class="swiper-wrapper" >
+                    <div class="swiper-slide slide" >
+                        <div class="content">
+                            <h3>it's where dreams come true</h3>
+                            <a href="#" class="btn">visit our offer</a>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="availability">
+            <form action="" id="form">
+                <div class="box">
+                    <p>Location<span>*</span></p>
+                    <input type="text" id="location" class="input" required >
+                </div>
+            <div class="box">
+                <p>check In<span>*</span></p>
+                <input type="date" id="checkindate" class="input" >
+            </div>
+            <div class="box">
+                <p>check out <span>*</span></p>
+                <input type="date" id="checkoutdate" class="input" >
+            </div>
+            <div class="box">
+                <p>adults <span>*</span></p>
+                <select name="adults" id="adults" class="input" >
+                    <option value="1">0adults</option>
+                    <option value="2">1 adults</option>
+                    <option value="3">2 adults</option>
+                    <option value="4">3 adults</option>
+                    <option value="5">4 adults</option>
+                    <option value="6">5 adults</option>
+                </select>
+    
+            </div>
+            <div class="box">
+                <p>children <span>*</span></p>
+                <select name="adults" id="child" class="input" >
+                    <option value="1">0 child</option>
+                    <option value="2">1 child</option>
+                    <option value="3">2 child</option>
+                    <option value="4">3 child</option>
+                    <option value="5">4 child</option>
+                    <option value="6">5 child</option>
+                </select>
+    
+            </div>
+            <div class="box">
+                <p>rooms <span>*</span></p>
+                <select name="adults" id="room" class="input" >
+                    <option value="1">1 rooms</option>
+                    <option value="2">2 rooms</option>
+                    <option value="3">3 rooms</option>
+                    <option value="4">4 rooms</option>
+                    <option value="5">5 rooms</option>
+                    <option value="6">6 rooms</option>
+                </select>
+    
+            </div>
+            <input onclick="openp()" type="submit" value="check availability" class="btn" id="btn" >
+        </form>
+    </section>
+    <section class="about" id="about">
+        <div class="row">
+            <div class="image">
+                <img src="saad-khan-425b2PhNuHA-unsplash.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>about us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita deleniti molestias vitae officia id odio error, mollitia eius et. Neque distinctio provident consequuntur dolore earum voluptatum laboriosam accusamus nesciunt velit?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, explicabo labore, quis possimus itaque eveniet eius quae sed autem magni dolorem animi, blanditiis pariatur amet eum repudiandae corporis laboriosam quo.</p>
+            </div>
+        </div>
+    </section>
+</div>
+    <div class="main" id="main">
+        <div class="cards">
+            <div class="photo">
+                <img src="point3d-commercial-imaging-ltd-oxeCZrodz78-unsplash.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 1</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis consequuntur aperiam dicta sint doloremque vero voluptates harum culpa cupiditate, recusandae dignissimos libero veniam distinctio impedit dolorem magni aliquam hic dolor?</p>
+                <button onclick="button()" class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img1.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 2</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, quaerat molestias? Blanditiis expedita nobis minus dolorum delectus exercitationem quia odit ipsum nisi sunt. Iure qui quam deleniti fugiat doloribus incidunt.</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img2.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 3</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni mollitia labore ea fugit adipisci, sequi ipsa! Minus quam molestiae repudiandae voluptatem, obcaecati qui maxime, enim porro unde ut doloribus inventore!</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img1.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 4</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi qui placeat architecto nobis libero natus, provident aspernatur, asperiores nihil enim unde! Adipisci, hic consectetur aliquid perferendis earum ipsa non vero.</p>
+                <button  onclick="button()" class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img4.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 5</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at, blanditiis magnam quisquam ex ea saepe eaque temporibus reprehenderit minus possimus. Id quae, beatae eaque dicta laudantium animi accusantium harum.</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img5.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 6</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ab blanditiis totam laudantium consequatur autem dolor consectetur voluptates, sed officiis alias temporibus ad deleniti, repellat placeat sint dolores mollitia accusamus!</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img6.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 7</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit autem sed ratione, harum exercitationem vero molestiae accusantium? Illo vel, repudiandae, labore facere libero suscipit, quia vitae explicabo id ullam nobis.</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img1.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 8</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, fuga! Vitae nulla debitis mollitia, fugiat asperiores non tempora velit earum praesentium quod exercitationem eum unde esse facere delectus assumenda atque?</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img8.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 9</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis autem officiis dolor illo vitae assumenda voluptatibus et quaerat corporis earum voluptates soluta facilis, nisi unde eos nulla sequi architecto! Voluptas.</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img13.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 10</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto numquam ipsa molestiae. Porro fugit repellendus ipsa odit molestias nesciunt eos debitis nobis id. Porro delectus inventore minima atque cum.</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img10.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 11</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius voluptates tempora nihil, atque consequatur, molestias eveniet voluptatem quibusdam amet deleniti repellat laborum vel facilis eligendi ea sequi consequuntur reiciendis?</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img11.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 12</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, aut assumenda! Nobis excepturi eum sit amet voluptatum, cumque consequuntur facilis autem, distinctio illo incidunt iusto hic quidem, assumenda consectetur doloribus.</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img12.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 13</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt atque, aliquam ipsa minima ipsum iste, dolor accusamus nihil minus alias laboriosam. Quas aliquam, accusamus obcaecati molestiae voluptatum ut? Similique, corporis!</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img13.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 14</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ullam temporibus vitae cumque enim itaque quae nobis voluptatibus quia ipsam corrupti, voluptate, officia ducimus alias dolorum ex aspernatur blanditiis nisi!</p>
+                <button onclick="button()" class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="images/img14.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 15</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi quis nulla error incidunt necessitatibus nihil ex quod repellendus sit eligendi! Consectetur incidunt, magnam aspernatur libero totam sapiente tempore dolorum sunt.</p>
+                <button onclick="button()"  class="book">Book now</button>
+            
+            </div>
+        </div>
+        <div class="cards">
+            <div class="photo">
+                <img src="point3d-commercial-imaging-ltd-oxeCZrodz78-unsplash.jpg" alt="" srcset="">
+    
+            </div>
+            <div class="title">
+                <p class="output">dream</p>
+                <h3>Hotel 16</h3>
+        
+            </div>
+            <div class="des">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore temporibus nihil sint, aliquam id ut aut voluptatibus esse mollitia veniam accusantium sit, ipsum illum porro enim eligendi necessitatibus. Magni, itaque.</p>
+                <button onclick="button()" class="book">Book now</button>
+            
+            </div>
+        </div>
+
+    </div>
+
+    <div class="secondmain" id="secondmain">
+        <div class="container">
+            <div class="pht">
+                <img src="standradroom.jpg" alt="" srcset="">
+            </div>
+            <div class="room">
+                <h3>Standard Room</h3>
+            </div>
+            
+            <div class="price">
+                <p>Price for one day <span>$200</span></p>
+            </div>
+            <form id="input">
+            <div class="numb">
+                <span>Number of rooms</span>
+                <input type="number" class="room1">
+            </div>
+            <div class="days">
+                <div class="in"><span> Check In Date:</span>
+                    <input type="date"></div>
+                    <div class="out">
+                        <span> Check Out Date:</span>
+                    <input type="date">
+                    </div>
+
+            </div>
+             </form>
+            <div class="price">
+                <h3 style="margin-top: 15px;">Total Price:  <span>$0</span></h3>
+            </div>
+       
+            <button onclick="del()" style="margin-left: 150px;
+                width: 30%;">Add</button>
+            
+        </div>
+        <div class="container">
+            <div class="pht">
+                <img src="sss.jpg" alt="" srcset="">
+            </div>
+            <div class="room">
+                <h3>Premium Room</h3>
+            </div>
+            
+            <div class="price">
+                <p>Price for one day <span>$400</span></p>
+            </div>
+            <form action="">
+            <div class="numb">
+                <span>Number of rooms</span>
+                <input type="number">
+            </div>
+            <div class="days">
+                <div class="in"><span> Check In Date:</span>
+                    <input type="date"></div>
+                <div class="out">
+                    <span> Check Out Date:</span>
+                <input type="date">
+                </div>
+            </div>
+            <div class="price">
+                <h3 style="margin-top: 15px;">Total Price:  <span>$0</span></h3>
+            </div>
+        </form>
+        <button onclick="del()" style= "margin-left:150px;
+                width: 30%;">Add</button>
+            
+        </div>
+       
+    </div>
+    <div id="fill">
+        <div class="personaldetail">
+
+            <div class="name">
+                <p>Name</p>
+                <input type="text" placeholder="Enter your name ">
+            </div>
+            <div class="email">
+                <p>Email id:</p>
+                <input type="email" placeholder="Enter your email">
+            </div>
+            
+            <div class="phone">
+                <p>Phone No.</p>
+                <input type="text">
+            </div>
+            <div class="address">
+                <p>Address</p>
+                <input type="text">
+                
+            </div>
+            <a href="thanks.html"><button  style="margin-left: 230px;">Submit</button></a>
+    
+            
+    
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
